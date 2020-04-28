@@ -1,37 +1,20 @@
 LTEV2Vsim - Releases Changelog
 
-FILE TO BE UPDATED WITH RELEASES 3.5b AND 5.0
+v5.0
+Main modification: common "main" for both LTE-V2X and IEEE 802.11p.
+Code has been reorganized and refactored. Other modifications are described in the ReadMe document released with the simulator.
+This version has been tested with LTE-V2X Mode 4 and IEEE 802.11p.
+Some LTE-V2X Mode 3 algorithms are also derived from previous versions, but they have not been tested in version 5.0.
 
-v3.5: Fifth Release
+v.4.1 (previously released as a beta version, it is not available for download)
+Main modification: the time granularity of LTE-V2X changes from beacon period to subframe.
+Algorithm 18 implements Mode 4 with the new time granularity.
 
-·	Added cut of the output file PRRmap following the input limits of the urban scenario
-·	Added files with traffic traces of Koln (http://kolntrace.project.citi-lab.fr/)
-·	Detailed implementation of 3GPP Mode 4 algorithm (BRAlgorithm 8)
-·	Enhancements on IEEE 802.11p simulation (less correlation of collisions for hidden nodes)
-·	Computation of update delay in IEEE 802.11p has been fixed
-·	Added new Mode 3 resource allocation algorithm called Maximum Reuse Distance (MRD) (BRAlgorithm 7)
-·	Added support for power control and output of the power allocation (printPowerControl)
-·	Added new Mode 3 resource allocation algorithm with power control and target blocking rate (BRAlgorithm 9)
-·	New settings added in output summary file “mainOut.xls”
-·	Added computation of available resources based on supported subchannel sizes (for adjacent or non-adjacent SCI+TB) from 3GPP TS 36.331 and 3GPP TS 36.213: added new input parame-ters sizeSubchannel and ifAdjacent
-·	Added possibility to consider only significant neighbors (neighborsSelection)
-·	General bugfixes and performance improvements
-·	BRAlgorithm 4 is currently disabled (not yet supported in this version of LTEV2Vsim)
-
-v3.3: Forth Release
-
-·	New interpolation method automatically performed before simulation (way faster and more accurate) - lighter package
-·	Added 3 Fileconfig (default, HighwayTrace.cfg, BolognaTrace.cfg)
-·	Parameter probResKeep for BRAlgorithm 8 is now set to 0.8 as default (higher PRR)
-·	All output files now have .xls extension
-·	Fixed an issue in border computation when selecting Poisson mobility model
-·	Fixed a problem in the limits of Rsense for BRAlgorithm 3
-·	Fixed a missing control in preliminary computations of BRAlgorithm 2
-·	Performance optimization when distanceDetails is enabled
-
-v3.1: Third Release (since this version, LTEV2Vsim requires at least MATLAB R2016b)
-
-·	Includes 9 LTE-V2V resource allocation algorithms and IEEE 802.11p: 
+v3.5b
+A brief tutorial is available with this version.
+Includes both LTE-V2X and IEEE 802.11p.
+The time granularity of LTE-V2X is the beacon period.
+Both Mode 4 and a few Mode 4 algorithms are implemented, including:
 1) NETWORK CONTROLLED with resources chosen in order or randomly
 2) NETWORK CONTROLLED with scheduled resource reassignment
 3) AUTONOMOUS with simplified sensing (using a given SENSING RANGE)
@@ -39,48 +22,5 @@ v3.1: Third Release (since this version, LTEV2Vsim requires at least MATLAB R201
 5) AUTONOMOUS with sensing algorithm by Qualcomm Inc.
 6) AUTONOMOUS with sensing algorithm by Intel Corp.
 8) AUTONOMOUS with sensing by 3GPP Mode 4 (Standard)
--	101) Random allocation
--	102) NETWORK CONTROLLED with allocation following X coordinate of vehicles
--	‘Technology’ = ‘80211p’ for IEEE 802.11p simulation
-
-·	Changes:
--	Added Winner+ B1 propagation model and correlated shadowing as from 3GPP
--	Added new LTE-V2V resource allocation algorithms (8,101,102)
--	Added IEEE 802.11p simulation
--	Added simulation of urban scenarios from file obstacles map with recognition of LOS and NLOS V2V links
--	Added In-band Emission (IBE) and possibility to exploit the frequency domain
--	Added possibility to choose the name of the output folder
--	Added possibility to read parameters from custom configuration file (LTEV2Vsim.cfg is set by default)
--	New outputs: update delay, packet delay, distance details, PRRmap
--	General bugfixes, code optimization and computation time reduction
-
-v2.1: ISWCS 2017 + PIMRC 2017 Version - Second Release
-
-·	Includes 6 resource allocation algorithms: 
-1) NETWORK CONTROLLED with resources chosen in order or randomly
-2) NETWORK CONTROLLED with scheduled resource reassignment
-3) AUTONOMOUS with simplified sensing (using a given SENSING RANGE)
-4) AUTONOMOUS with MAP-RP (i.e., PIMRC 2017 Paper)
-5) AUTONOMOUS with sensing algorithm by Qualcomm Inc.
-6) AUTONOMOUS with sensing algorithm by Intel Corp.
-
-·	Changes:
--	Added positioning update delay
--	Added new resource allocation algorithms (2,4,5 and 6)
--	Added new output: Packet Reception Ratio (PRR)
--	Added complete 3GPP table for computation of RBs per beacon (support of all compat-ible beacon sizes and MCS)
--	Changed some names of variables
--	Bugfixes and revision of comments
-
-v1.0: MT-ITS 2017 Version - First Release
-
-·	Includes 2 resource allocation algorithms:
-1) NETWORK CONTROLLED with resources chosen in order or randomly
-3) AUTONOMOUS with simplified sensing (using a given SENSING RANGE)
-
-·	Outputs: 
--	Average blocking rate
--	Average error rate
--	Average neighbors per vehicle (with standard deviation)
--	Average resource reassignments per vehicle per beacon period
--	Beacon update delay (UD)
+101) Random allocation
+102) NETWORK CONTROLLED with allocation following X coordinate of vehicles
