@@ -4,7 +4,7 @@ LTEV2Vsim is a dynamic simulator, written in MATLAB, designed for the investigat
 
 The simulator is shared under the GNU GPLv3.
 
-The software has been developed and shared by University of Bologna, CNR, and CNIT - Italy. A web page was set up at http://www.wcsg.ieiit.cnr.it/products/LTEV2Vsim.html (download of code and files from there are not available since january 2020 - please consider that information inside that page might not be always up-to-date)
+The software has been developed and shared by University of Bologna, CNR, and CNIT - Italy. A web page was set up at http://www.wcsg.ieiit.cnr.it/products/LTEV2Vsim.html (since January 2020, download of code and files from there are not available - information inside that page might also not be always up-to-date)
 
 Before version 5.0, the simulator was based on a "beacon period" timing, which was a trade-off between accuracy and speed. Starting from version 5.0, the time granularity has been reduced to 1 ms in order to allow simulating more cases, including traffic generation with non-uniform-periodic carachteristics. Additionaly, whereas before version 5.0 there were two separate main files for LTE-V2X and IEEE 802.11p, since verison 5.0 there is a single main, allowing simulating both technologies at the same time.
 
