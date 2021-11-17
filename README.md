@@ -1,5 +1,11 @@
 # LTEV2Vsim
 
+******
+We are uploading the new release of the simulator, including 5G-V2X
+It will be with a new name at this link: https://github.com/V2Xgithub/WiLabV2Xsim
+Since, despite the new name it is more an upgrade than a new simulator, we will start with Version 6.1
+******
+
 LTEV2Vsim is a dynamic simulator, written in MATLAB, designed for the investigation of resource allocation in LTE-V2V networks, with focus on the cooperative awareness service. Since version 3.0, LTEV2Vsim also allows to simulate the cooperative awareness service using IEEE 802.11p/ITS-G5.
 
 The simulator is shared under the GNU GPLv3.
